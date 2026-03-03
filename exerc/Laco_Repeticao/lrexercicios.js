@@ -1,6 +1,6 @@
 
-//Text
-//Text
+// Teste while
+// Repete o código enquanto a condição for real, testando antes de começar.
 
 function exercicio_while() {
 
@@ -11,8 +11,8 @@ function exercicio_while() {
     }
 }
 
-//Text
-//Text
+// Teste dowhile
+// Executa o código primeiro e só depois testa a condição, garantindo uma rodada inicial.
 
 function exercicio_dowhile() {
 
@@ -23,8 +23,8 @@ function exercicio_dowhile() {
     } while (j < 5);
 }
 
-//Text
-//Text
+// Teste for
+// Repetição controlada com contador, condição e incremento integrados.
 
 function exercicio_for() {
 
@@ -33,8 +33,8 @@ function exercicio_for() {
     }
 }
 
-//Text
-//Text
+// Teste for each
+// Atalho para percorrer e ler cada item de uma lista.
 
 function exercicio_foreach() {
 
@@ -42,14 +42,23 @@ function exercicio_foreach() {
     numeros.forEach(n => console.log(n));
 }
 
-//Text
-//Text
+// Teste map
+// Gera uma nova lista modificada a partir dos dados de uma lista original.
 
 function exercicio_map() {
-
+    let numeros = [1, 2, 3];
     let dobro = numeros.map(n => n * 2);
     console.log(dobro);
 }
 
-
+console.log("Iniciando testes...");
 exercicio_while();
+console.log("-----------------------------------------------------------------------");
+exercicio_dowhile();
+console.log("-----------------------------------------------------------------------");
+exercicio_for();
+console.log("-----------------------------------------------------------------------");
+exercicio_foreach();
+console.log("-----------------------------------------------------------------------");
+exercicio_map();
+console.log("Exercício map finalizado.");

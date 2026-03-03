@@ -1,6 +1,6 @@
 
-// Text
-// Text
+// Manipulação de Vetor de Objetos
+// Cria e exibe uma lista estruturada de produtos, utilizando JSON.stringify para formatar a saída do array de objetos no terminal.
 
 function exercicio_vetor(){
 
@@ -45,4 +45,6 @@ let produtos = [
 console.log(JSON.stringify(produtos, null, 2));
 }
 
+console.log("Iniciando testes...");
 exercicio_vetor();
+console.log("Todos os exercícios finalizados.");

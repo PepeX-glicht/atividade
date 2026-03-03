@@ -1,10 +1,10 @@
 
-// Text
-// Text
+// Validador de Dias
+// Estrutura de controle que mapeia números para nomes de dias da semana.
 
-function exercicio1() {
+function exercicio_swicht() {
 
-let dia = 0;
+let dia = 1;
 
 switch (dia) {
   
@@ -25,4 +25,6 @@ switch (dia) {
     }
 }
 
-exercicio1();
+console.log("Iniciando testes...");
+exercicio_swicht();
+console.log("Todos os exercícios finalizados.");

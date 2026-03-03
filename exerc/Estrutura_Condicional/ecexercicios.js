@@ -51,4 +51,12 @@ function exercicio4() {
     console.log("Status da conta: " + statusConta);
 }
 
+console.log("Iniciando testes...");
+exercicio1();
+console.log("-----------------------------------------------------------------------");
+exercicio2();
+console.log("-----------------------------------------------------------------------");
 exercicio3();
+console.log("-----------------------------------------------------------------------");
+exercicio4();
+console.log("Todos os exercícios finalizados.");

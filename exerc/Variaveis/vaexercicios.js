@@ -1,5 +1,5 @@
 
-// 1 - Cadastro de Produto
+// Cadastro de Produto
 // Crie variáveis para armazenar o nome de um produto, seu preço e a quantidade em estoque. Imprima essas informações no console.
 
 function exercicio1() {
@@ -11,7 +11,7 @@ function exercicio1() {
     console.log("Produto:", nomeProduto, "| Preço: R$", preco, "| Estoque:", estoque);
 }
 
-// 2 - Operações Matemáticas
+// Operações Matemáticas
 // Crie variáveis para armazenar dois números. Calcule e imprima a soma e a multiplicação desses números no console.
 
 function exercicio2() {
@@ -25,7 +25,7 @@ function exercicio2() {
     console.log("A multiplicação é:", produto);
 }
 
-// 3 - Texto e Concatenação
+// Texto e Concatenação
 // Crie variáveis para armazenar seu nome, sobrenome e idade. Concatene essas informações em uma frase e imprima no console.
 
 function exercicio3() {
@@ -38,4 +38,10 @@ function exercicio3() {
     console.log("Olá, meu nome é " + nomeCompleto + " e eu tenho " + idade + " anos.");
 }
 
+console.log("Iniciando testes...");
 exercicio1();
+console.log("-----------------------------------------------------------------------");
+exercicio2();
+console.log("-----------------------------------------------------------------------");
+exercicio3();
+console.log("Todos os exercícios finalizados.");
