@@ -2,7 +2,7 @@
 // Validador de Dias
 // Estrutura de controle que mapeia números para nomes de dias da semana.
 
-function exercicio_swicht() {
+export function exercicio_swicht() {
 
 let dia = 1;
 
@@ -24,7 +24,3 @@ switch (dia) {
         console.log("Outro dia");
     }
 }
-
-console.log("Iniciando testes...");
-exercicio_swicht();
-console.log("Todos os exercícios finalizados.");

@@ -1,7 +1,7 @@
 // 1 - If Simples
 // Crie uma variável para a nota de um aluno. Se a nota for maior ou igual a 6, imprima "Aprovado".
 
-function exercicio1() {
+export function exercicio_ec1() {
     let nota = 8.5;
 
     console.log("--- Exercício 1 ---");
@@ -13,7 +13,7 @@ function exercicio1() {
 // 2 - If Básico (Else)
 // Crie uma variável para um número. Verifique se ele é positivo (maior ou igual a 0) ou negativo e imprima o resultado.
 
-function exercicio2() {
+export function exercicio_ec2() {
     let numero = -10;
 
     console.log("--- Exercício 2 ---");
@@ -27,7 +27,7 @@ function exercicio2() {
 // 3 - If Composto (Else If)
 // Verifique a idade de uma pessoa e classifique-a em: "Criança" (até 12 anos), "Adolescente" (13 a 17) ou "Adulto" (18 ou mais).
 
-function exercicio3() {
+export function exercicio_ec3() {
     let idade = 15;
 
     console.log("--- Exercício 3 ---");
@@ -43,20 +43,10 @@ function exercicio3() {
 // 4 - Ternário
 // Crie uma variável para o saldo de uma conta. Use o operador ternário para imprimir "Saldo Positivo" se for maior que 0, ou "Saldo Insuficiente" caso contrário.
 
-function exercicio4() {
+export function exercicio_ec4() {
     let saldo = 50.00;
     let statusConta = (saldo > 0) ? "Saldo Positivo" : "Saldo Insuficiente";
 
     console.log("--- Exercício 4 ---");
     console.log("Status da conta: " + statusConta);
 }
-
-console.log("Iniciando testes...");
-exercicio1();
-console.log("-----------------------------------------------------------------------");
-exercicio2();
-console.log("-----------------------------------------------------------------------");
-exercicio3();
-console.log("-----------------------------------------------------------------------");
-exercicio4();
-console.log("Todos os exercícios finalizados.");

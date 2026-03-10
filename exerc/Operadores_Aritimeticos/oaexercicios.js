@@ -2,7 +2,7 @@
 // Operadores e Funções Matemáticas
 // Realiza operações matemáticas básicas (adição, subtração, multiplicação, divisão) e avançadas (potência, raiz) para manipular números.
 
-function exercicio1() {
+export function exercicio_oa() {
     let a = 10;
     let b = 5;
 
@@ -14,7 +14,3 @@ function exercicio1() {
     console.log(Math.pow(a, b));
     console.log(Math.sqrt(a));
 }
-
-console.log("Iniciando testes...");
-exercicio1();
-console.log("Todos os exercícios finalizados.");
