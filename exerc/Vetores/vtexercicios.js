@@ -4,7 +4,12 @@
 
 export function exercicio_busca() {
     let lista = ["João", "Maria", "Carlos"];
-    console.log(lista.includes("Maria"));
+    let nomeProcurado = "Maria";
+    
+    return{
+        nomeProcurado
+    }
+
 }
 
 // Acumulador de Valores (Somatória)
@@ -13,5 +18,8 @@ export function exercicio_busca() {
 export function exercicio_somatoria() {
     let numeros = [10,20,30];
     let soma = numeros.reduce((acc, n) => acc + n, 0);
-    console.log("Soma:", soma);
+    
+    return{
+        soma
+    }
 }

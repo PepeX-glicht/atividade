@@ -7,9 +7,13 @@ export function exercicio_var1() {
     let preco = 1200.50;
     let estoque = 15;
 
-    console.log("--- Exercício 1 ---");
-    console.log("Produto:", nomeProduto, "| Preço: R$", preco, "| Estoque:", estoque);
+    return {
+        nomeProduto,
+        preco,
+        estoque
+    };
 }
+
 
 // Operações Matemáticas
 // Crie variáveis para armazenar dois números. Calcule e imprima a soma e a multiplicação desses números no console.
@@ -20,9 +24,10 @@ export function exercicio_var2() {
     let soma = num1 + num2;
     let produto = num1 * num2;
 
-    console.log("--- Exercício 2 ---");
-    console.log("A soma é:", soma);
-    console.log("A multiplicação é:", produto);
+    return{
+        soma,
+        produto
+    }
 }
 
 // Texto e Concatenação
@@ -34,6 +39,8 @@ export function exercicio_var3() {
     let nomeCompleto = nome + " " + sobrenome;
     let idade = 25;
 
-    console.log("--- Exercício 3 ---");
-    console.log("Olá, meu nome é " + nomeCompleto + " e eu tenho " + idade + " anos.");
+    return{
+        nomeCompleto,
+        idade
+    }
 }

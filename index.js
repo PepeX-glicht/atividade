@@ -1,26 +1,66 @@
+import express from "express";
 import { exercicio_var1, exercicio_var2, exercicio_var3 } from './exerc/Variaveis/vaexercicios.js';
-console.log("=== TESTES CONCLUÍDOS 0 ===");
+import { exercicio_busca, exercicio_somatoria } from './exerc/Vetores/vtexercicios.js';
 
-import { exercicio_busca, exercicio_somatoria } from './exerc/Vetores/vtexercicios.js'
-console.log("=== TESTES CONCLUÍDOS 1 ===");
 
-import { exercicio_swicht } from './exerc/Swicht/swexercicios.js';
-console.log("=== TESTES CONCLUÍDOS 2 ===");
 
-import { exercicio_or } from './exerc/Operadores_Relacionais/orexercicios.js';
-console.log("=== TESTES CONCLUÍDOS 3 ===");
+const app = express();
+const porta = 3000;
 
-import { exercicio_ol } from './exerc/Operadores_Logicos/olexercicios.js';
-console.log("=== TESTES CONCLUÍDOS 4 ===");
+//VARIAVEIS
 
-import { exercicio_oa } from './exerc/Operadores_Aritimeticos/oaexercicios.js';
-console.log("=== TESTES CONCLUÍDOS 5 ===");
+//EX.1
+app.get("/exercicio1", (req, res) => {
+    const produto = exercicio_var1();
+    res.send(`Produto: ${produto.nomeProduto} | Preço: R$ ${produto.preco} | Estoque: ${produto.estoque}`);
+});
 
-import { exercicio_lr1, exercicio_lr2, exercicio_lr3, exercicio_lr4, exercicio_lr5 } from './exerc/Laco_Repeticao/lrexercicios.js';
-console.log("=== TESTES CONCLUÍDOS 6 ===");
 
-import { exercicio_vetor } from './exerc/Json_vetores/jvexercicios.js';
-console.log("=== TESTES CONCLUÍDOS 7 ===");
+//EX.2
 
-import { exercicio_ec1, exercicio_ec2, exercicio_ec3, exercicio_ec4 } from './exerc/Estrutura_Condicional/ecexercicios.js';
-console.log("=== TESTES CONCLUÍDOS 8 ===");
+app.get("/exercicio2", (req, res) =>{
+    const operacao = exercicio_var2();
+    res.send(`Soma e multiplicação: ${operacao.soma} | ${operacao.produto}`)
+   
+})
+
+
+//EX.3
+
+app.get("/exercicio3", (req, res) =>{
+    const apresentacao = exercicio_var3();
+    res.send(`Olá meu nome é: ${apresentacao.nomeCompleto} e eu tenho ${apresentacao.idade} anos `)
+   
+})
+
+//VETORES
+
+//EX.1
+
+app.get("/vetor1", (req, res) =>{
+   const procurar = exercicio_busca();
+   res.send(`O nome procurado foi ${procurar.nomeProcurado}`)
+   
+})
+
+
+//EX.2
+
+app.get("/vetor2", (req, res) =>{
+   const somatoria = exercicio_somatoria();
+   res.send(`A soma dos numeros e ${somatoria.soma}`)
+   
+})
+
+//ESTRUTURA CONDICIONAL
+
+
+
+
+
+
+
+app.listen(porta, () => {
+    console.log("Servidor rodando em http://localhost:3000");
+});
+
