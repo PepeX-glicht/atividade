@@ -6,11 +6,21 @@ export function exercicio_oa() {
     let a = 10;
     let b = 5;
 
-    console.log(a + b);
-    console.log(a - b);
-    console.log(a * b);
-    console.log(a / b);
-    console.log(a % b);
-    console.log(Math.pow(a, b));
-    console.log(Math.sqrt(a));
+    let soma = (a + b);
+    let sub = (a - b);
+    let mult = (a * b);
+    let div = (a / b);
+    let resto = (a % b);
+    let potencia = (Math.pow(a, b));
+    let raiz = (Math.sqrt(a));
+
+    return{
+        soma,
+        sub,
+        mult,
+        div,
+        resto,
+        potencia,
+        raiz
+    }
 }

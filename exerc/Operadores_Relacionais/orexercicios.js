@@ -6,10 +6,19 @@ export function exercicio_or() {
 let x = 10;
 let y = 20;
 
-console.log(x > y);
-console.log(x < y);  
-console.log(x >= y); 
-console.log(x <= y);  
-console.log(x == y); 
-console.log(x != y);
+let maior = (x > y);
+let menor = (x < y);
+let maiorIgual = (x >= y);  
+let menorIgual = (x <= y);  
+let igual = (x == y); 
+let diferente = (x != y);
+
+return{
+    maior,
+    menor,
+    maiorIgual,
+    menorIgual,
+    igual,
+    diferente
+}
 }

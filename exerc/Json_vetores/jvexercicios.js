@@ -2,7 +2,7 @@
 // Manipulação de Vetor de Objetos
 // Cria e exibe uma lista estruturada de produtos, utilizando JSON.stringify para formatar a saída do array de objetos no terminal.
 
-export function exercicio_vetor(){
+export function exercicio_vetor(id){
 
 let produtos = [
   {
@@ -42,5 +42,7 @@ let produtos = [
   }
 ];
 
-console.log(JSON.stringify(produtos, null, 2));
+let produto = produtos.find(p => p.id == id);
+
+return produto;
 }
