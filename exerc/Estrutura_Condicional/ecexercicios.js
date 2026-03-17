@@ -1,26 +1,22 @@
+
 // 1 - If Simples
 // Crie uma variável para a nota de um aluno. Se a nota for maior ou igual a 6, imprima "Aprovado".
-
 export function exercicio_ec1() {
     let nota = 8.5;
-
-    console.log("--- Exercício 1 ---");
     if (nota >= 6) {
-        console.log("Resultado: Aprovado");
+        return "Aprovado";
     }
+    return "Reprovado"; // Adicionado para não retornar vazio no navegador
 }
 
 // 2 - If Básico (Else)
 // Crie uma variável para um número. Verifique se ele é positivo (maior ou igual a 0) ou negativo e imprima o resultado.
-
 export function exercicio_ec2() {
     let numero = -10;
-
-    console.log("--- Exercício 2 ---");
     if (numero >= 0) {
-        console.log("O número " + numero + " é Positivo.");
+        return `O número ${numero} é Positivo.`;
     } else {
-        console.log("O número " + numero + " é Negativo.");
+        return `O número ${numero} é Negativo.`;
     }
 }
 
@@ -29,14 +25,12 @@ export function exercicio_ec2() {
 
 export function exercicio_ec3() {
     let idade = 15;
-
-    console.log("--- Exercício 3 ---");
     if (idade <= 12) {
-        console.log("Classificação: Criança");
+        return "Classificação: Criança";
     } else if (idade <= 17) {
-        console.log("Classificação: Adolescente");
+        return "Classificação: Adolescente";
     } else {
-        console.log("Classificação: Adulto");
+        return "Classificação: Adulto";
     }
 }
 
@@ -45,8 +39,7 @@ export function exercicio_ec3() {
 
 export function exercicio_ec4() {
     let saldo = 50.00;
+    // O ternário já retorna o valor para a variável statusConta
     let statusConta = (saldo > 0) ? "Saldo Positivo" : "Saldo Insuficiente";
-
-    console.log("--- Exercício 4 ---");
-    console.log("Status da conta: " + statusConta);
+    return statusConta;
 }

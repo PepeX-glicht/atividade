@@ -2,11 +2,17 @@
 // Operadores Lógicos
 // Avalia múltiplas condições (E, OU, NÃO) para determinar se um critério complexo é verdadeiro ou falso.
 
-export function exercicio_ol(){
-let idade = 20;
-let temCarteira = true;
+export function exercicio_ol() {
+    let idade = 20;
+    let temCarteira = true;
 
-console.log(idade >= 18 && temCarteira);
-console.log(idade >= 18 || temCarteira);
-console.log(!temCarteira);
+    let podeDirigir = (idade >= 18 && temCarteira); // E (AND)
+    let podeEntrar = (idade >= 18 || temCarteira);  // OU (OR)
+    let naoTemCarteira = (!temCarteira);            // NÃO (NOT)
+
+    return {
+        podeDirigir,
+        podeEntrar,
+        naoTemCarteira
+    };
 }
