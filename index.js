@@ -3,16 +3,16 @@ import express from "express";
 import { router_ex } from "./exerc/Estrutura_Condicional/router_exercicio.js";
 import { router_json } from "./exerc/Json_vetores/router_json.js";
 import { router_repeticao } from "./exerc/Laco_Repeticao/router_repeticao.js";
-
-
-
-
-import { exercicio_var1, exercicio_var2, exercicio_var3 } from './exerc/Variaveis/vaexercicios.js';
-import { exercicio_busca, exercicio_somatoria } from './exerc/Vetores/vtexercicios.js';
 import { router_aritimetico } from "./exerc/Operadores_Aritimeticos/router_arit.js";
 import { router_logicos } from "./exerc/Operadores_Logicos/router_logicos.js";
 import { router_relacionais } from "./exerc/Operadores_Relacionais/router_relacionais.js";
 import { router_switch } from "./exerc/Switch/router_switch.js";
+
+import { exercicio_var1, exercicio_var2, exercicio_var3 } from './exerc/Variaveis/vaexercicios.js';
+import { exercicio_busca, exercicio_somatoria } from './exerc/Vetores/vtexercicios.js';
+
+
+
 
 const app = express();
 const porta = 3000;
@@ -24,30 +24,28 @@ app.get("/", (req, res) => {
     res.send("Servidor rodando! Acesse as rotas...");
 });
 
-//  CONDICIONAL
+// CONDICIONAL
 app.use('/', router_ex)
 
-//JSON
-
+// JSON
 app.use('/', router_json)
 
-//REPETIÇÃO
+// REPETIÇÃO
 app.use('/', router_repeticao)
 
-//ARITIMETICOS
+// OPARITIMETICOS
 app.use('/', router_aritimetico)
 
-//LOGICOS
+// OPLOGICOS
 app.use('/', router_logicos)
 
-// Relacionais
+// OPRELACIONAIS
 app.use('/', router_relacionais)
 
-
-// Switch
+// SWITCH
 app.use('/', router_switch )
 
-// Variáveis
+// VARIAVEIS
 // EX.1
 app.get("/exercicio1", (req, res) => {
     const produto = exercicio_var1();
@@ -79,7 +77,10 @@ app.get("/exercicio3", (req, res) =>{
 });
 
 
-// Vetores
+
+
+// VETORES
+
 // Exercício 1
 app.get("/Vetor1", (req, res) =>{
    const procurar = exercicio_busca();
