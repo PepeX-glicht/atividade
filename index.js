@@ -12,10 +12,41 @@ import { router_switch } from "./exerc/Switch/router_switch.js";
 import { router_variaveis } from "./exerc/Variaveis/router_variaveis.js";
 import { router_vetores } from "./exerc/Vetores/router.vetores.js";
 
-// HOME
-app.use("/", (req, res) => {
-    res.send("Hello World!");
-}); 
+
+
+
+    //REQ.PARAMS
+app.get('/usuarios/:id', (req, res) => {
+    const {id} = req.params; // Destructuring do ES6
+    res.send('Buscando dados do usuário com ID: ${id}');
+    }); 
+
+    // REQ.QUERY
+app.get('/produtos', (req, res) => {
+    const { nome, cor } = req.query;
+    res.json({
+        mensagem: 'Filtrando produtos por nome: ${nome} e cor: ${cor}'
+    });
+});
+
+    // REQ.BODY
+    // Usar este middleware no topo do seu arquivo //app.use(express.json());
+app.post('/produtos', (req, res) => {
+
+    // Capturamos os dados enviados no corpo da requisição
+    const { nome, preco, estoque } = req.body;
+
+    // Lógica (ex: salvar no banco)
+    const novoProduto = {
+        id: Math.random().
+        nome,
+        preco,
+        estoque
+    }
+});
+
+
+
 
 // ESTRUTURA CONDICIONAL
 app.use(router_ex)
