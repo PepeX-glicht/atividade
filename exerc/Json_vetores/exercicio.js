@@ -1,4 +1,3 @@
-
 // Manipulação de Vetor de Objetos
 // Cria e exibe uma lista estruturada de produtos, utilizando JSON.stringify para formatar a saída do array de objetos no terminal.
 
@@ -46,5 +45,3 @@ let produto = produtos.find(p => p.id == id);
 
 return produto;
 }
-
-

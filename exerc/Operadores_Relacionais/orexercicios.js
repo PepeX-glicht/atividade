@@ -1,4 +1,3 @@
-
 // Operadores de Comparação
 // Testa a lógica entre dois números usando símbolos matemáticos para retornar verdadeiro ou falso.
 

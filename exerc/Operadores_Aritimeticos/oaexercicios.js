@@ -1,8 +1,8 @@
-
 // Operadores e Funções Matemáticas
 // Realiza operações matemáticas básicas (adição, subtração, multiplicação, divisão) e avançadas (potência, raiz) para manipular números.
 
 export function exercicio_oa() {
+
     let a = 10;
     let b = 5;
 

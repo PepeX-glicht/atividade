@@ -1,6 +1,6 @@
-
 // 1 - If Simples
 // Crie uma variável para a nota de um aluno. Se a nota for maior ou igual a 6, imprima "Aprovado".
+
 export function exercicio_ec1() {
     let nota = 8.5;
     if (nota >= 6) {
@@ -11,6 +11,7 @@ export function exercicio_ec1() {
 
 // 2 - If Básico (Else)
 // Crie uma variável para um número. Verifique se ele é positivo (maior ou igual a 0) ou negativo e imprima o resultado.
+
 export function exercicio_ec2() {
     let numero = -10;
     if (numero >= 0) {

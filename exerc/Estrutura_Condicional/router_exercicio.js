@@ -1,10 +1,8 @@
 import express from "express";
 import { exercicio_ec1, exercicio_ec2, exercicio_ec3, exercicio_ec4 } from "./ecexercicios.js";
 
-const app = express();
-const router_ex = express()
+const router_ex = express.Router(); 
 
-// Estrutura Condicional
 router_ex.get("/Estrutura_condicional", (req, res) => {
     const ex1 = exercicio_ec1();
     const ex2 = exercicio_ec2();
@@ -20,4 +18,4 @@ router_ex.get("/Estrutura_condicional", (req, res) => {
     `);
 });
 
-export{router_ex}
+export { router_ex };

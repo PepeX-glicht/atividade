@@ -1,12 +1,8 @@
 import express from "express";
 import { exercicio_ol } from "./olexercicios.js";
 
-const app = express();
-const router_logicos = express()
+const router_logicos = express.Router();
 
-
-
-// Operadores Lógicos
 router_logicos.get("/Operadores_logicos", (req, res) => {
     const logico = exercicio_ol();
     
@@ -18,4 +14,4 @@ router_logicos.get("/Operadores_logicos", (req, res) => {
     `);
 });
 
-export{router_logicos}
+export { router_logicos };

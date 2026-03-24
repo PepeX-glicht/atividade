@@ -1,11 +1,9 @@
 import express from "express";
 import { exercicio_or } from "./orexercicios.js";
 
-const app = express();
+const router_relacionais = express.Router();
 
-const router_relacionais = express()
-
-router_relacionais.get("/Operadores_relacionais", (req, res) =>{
+router_relacionais.get("/Operadores_relacionais", (req, res) => {
     const op = exercicio_or();
     
     res.send(`
@@ -19,5 +17,4 @@ router_relacionais.get("/Operadores_relacionais", (req, res) =>{
     `);
 });
 
-export{router_relacionais}
-
+export { router_relacionais };

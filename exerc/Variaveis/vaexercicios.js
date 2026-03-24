@@ -1,4 +1,3 @@
-
 // Cadastro de Produto
 // Crie variáveis para armazenar o nome de um produto, seu preço e a quantidade em estoque. Imprima essas informações no console.
 
@@ -13,7 +12,6 @@ export function exercicio_var1() {
         estoque
     };
 }
-
 
 // Operações Matemáticas
 // Crie variáveis para armazenar dois números. Calcule e imprima a soma e a multiplicação desses números no console.

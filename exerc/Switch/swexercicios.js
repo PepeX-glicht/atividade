@@ -1,9 +1,8 @@
-
 // Validador de Dias
 // Estrutura de controle que mapeia números para nomes de dias da semana.
 
 export function exercicio_switch() {
-    let dia = 1;
+    let dia = 4;
     let resultado = "";
 
     switch (dia) {

@@ -1,4 +1,3 @@
-
 // Verificação de Presença em Array
 // Verifica se um elemento existe dentro de uma lista e retorna um valor booleano.
 
@@ -9,7 +8,6 @@ export function exercicio_busca() {
     return{
         nomeProcurado
     }
-
 }
 
 // Acumulador de Valores (Somatória)

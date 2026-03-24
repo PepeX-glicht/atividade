@@ -1,19 +1,15 @@
 import express from "express";
 import { exercicio_vetor } from "./exercicio.js";
 
-const app = express();
-const router_json = express()
+const router_json = express.Router();
 
+router_json.get("/json_vetores/:id", (req, res) =>{
+    
+    const id = req.params.id; 
 
-// Json_vetores
-router_json.get("/json_vetores/", (req, res) =>{
-    const id = req.params.id;
-    const produto = exercicio_vetor(4);
+    const produto = exercicio_vetor(Number(id)); 
+    
     res.json(produto);
-})
+});
 
-export{router_json}
-
-
-
-
+export { router_json };

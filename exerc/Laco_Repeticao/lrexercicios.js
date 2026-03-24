@@ -1,6 +1,6 @@
-
 // Teste while
 // Repete o código enquanto a condição for real, testando antes de começar.
+
 export function exercicio_lr1() {
     let i = 0;
     let resultados = []; // Array para guardar os números
@@ -13,6 +13,7 @@ export function exercicio_lr1() {
 
 // Teste dowhile
 // Executa o código primeiro e só depois testa a condição, garantindo uma rodada inicial.
+
 export function exercicio_lr2() {
     let j = 0;
     let resultados = [];
@@ -25,6 +26,7 @@ export function exercicio_lr2() {
 
 // Teste for
 // Repetição controlada com contador, condição e incremento integrados.
+
 export function exercicio_lr3() {
     let resultados = [];
     for (let k = 0; k < 5; k++) {
@@ -35,6 +37,7 @@ export function exercicio_lr3() {
 
 // Teste for each
 // Atalho para percorrer e ler cada item de uma lista.
+
 export function exercicio_lr4() {
     let numeros = [1, 2, 3];
     let listaFormatada = "";
@@ -46,6 +49,7 @@ export function exercicio_lr4() {
 
 // Teste map
 // Gera uma nova lista modificada a partir dos dados de uma lista original.
+
 export function exercicio_lr5() {
     let numeros = [1, 2, 3];
     let dobro = numeros.map(n => n * 2);
