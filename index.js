@@ -12,6 +12,10 @@ import { router_switch } from "./exerc/Switch/router_switch.js";
 import { router_variaveis } from "./exerc/Variaveis/router_variaveis.js";
 import { router_vetores } from "./exerc/Vetores/router.vetores.js";
 
+// HOME
+app.use("/", (req, res) => {
+    res.send("Hello World!");
+}); 
 
 // ESTRUTURA CONDICIONAL
 app.use(router_ex)
