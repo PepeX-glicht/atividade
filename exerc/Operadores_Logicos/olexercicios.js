@@ -5,9 +5,9 @@ export function exercicio_ol() {
     let idade = 20;
     let temCarteira = true;
 
-    let podeDirigir = (idade >= 18 && temCarteira); // E (AND)
-    let podeEntrar = (idade >= 18 || temCarteira);  // OU (OR)
-    let naoTemCarteira = (!temCarteira);            // NÃO (NOT)
+    let podeDirigir = (idade >= 18 && temCarteira); 
+    let podeEntrar = (idade >= 18 || temCarteira);  
+    let naoTemCarteira = (!temCarteira);            
 
     return {
         podeDirigir,

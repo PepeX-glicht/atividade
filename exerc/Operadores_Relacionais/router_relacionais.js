@@ -1,9 +1,10 @@
 import express from "express";
 import { exercicio_or } from "./orexercicios.js";
 
-const router_relacionais = express.Router();
+const router_oprelacionais = express.Router();
 
-router_relacionais.get("/Operadores_relacionais", (req, res) => {
+// Operadores relacionais (exercício fixo)
+router_oprelacionais.get("/Operadores_relacionais", (req, res) => {
     const op = exercicio_or();
     
     res.send(`
@@ -17,4 +18,39 @@ router_relacionais.get("/Operadores_relacionais", (req, res) => {
     `);
 });
 
-export { router_relacionais };
+
+
+
+// Exercicio utilizando req.params
+router_oprelacionais.get("/operadores_relacionais/:x/:y", (req, res) => {
+
+    const { x, y } = req.params;
+    
+    const numX = Number(x);
+    const numY = Number(y);
+    const resultados = {
+        maior: (numX > numY),
+        menor: (numX < numY),
+        maiorIgual: (numX >= numY),
+        menorIgual: (numX <= numY),
+        igual: (numX == numY),
+        diferente: (numX != numY)
+    };
+
+    res.send(`
+        <h3>Operadores de Comparação (Relacionais)</h3>
+        <p>Comparando <b>X: ${numX}</b> com <b>Y: ${numY}</b></p>
+        <hr>
+        <ul>
+            <li>${numX} > ${numY} ? <b>${resultados.maior}</b></li>
+            <li>${numX} < ${numY} ? <b>${resultados.menor}</b></li>
+            <li>${numX} >= ${numY} ? <b>${resultados.maiorIgual}</b></li>
+            <li>${numX} <= ${numY} ? <b>${resultados.menorIgual}</b></li>
+            <li>${numX} == ${numY} ? <b>${resultados.igual}</b></li>
+            <li>${numX} != ${numY} ? <b>${resultados.diferente}</b></li>
+        </ul>
+    `);
+});
+
+
+export { router_oprelacionais };

@@ -3,13 +3,15 @@ import { exercicio_busca, exercicio_somatoria } from './vtexercicios.js';
 
 const router_vetores = express.Router();
 
+// Exercicios fixos
+// Ex1
 router_vetores.get("/Vetores", (req, res) => {
-
     const busca = exercicio_busca();
     const listaNomes = ["João", "Maria", "Carlos"];
     const encontrado = listaNomes.includes(busca.nomeProcurado) ? "Sim" : "Não";
 
-
+    
+// Ex2
     const total = exercicio_somatoria();
 
     res.send(`
@@ -32,5 +34,40 @@ router_vetores.get("/Vetores", (req, res) => {
         </p>
     `);
 });
+
+
+
+
+// Exercicio utilizando req.params
+// Ex1
+router_vetores.get("/vetores/buscar/:nome", (req, res) => {
+    const { nome } = req.params;
+    const lista = ["João", "Maria", "Carlos"];
+
+    const encontrado = lista.includes(nome);
+
+    res.send(`
+        <h3>Busca em Array</h3>
+        <p>Lista de nomes: [${lista.join(", ")}]</p>
+        <p>O nome <b>${nome}</b> foi encontrado? <b>${encontrado ? "Sim ✅" : "Não ❌"}</b></p>
+    `);
+});
+
+
+// Ex2
+router_vetores.get("/vetores/soma/:n1/:n2/:n3", (req, res) => {
+    const { n1, n2, n3 } = req.params;
+
+    const numeros = [Number(n1), Number(n2), Number(n3)];
+    
+    const total = numeros.reduce((acc, n) => acc + n, 0);
+
+    res.send(`
+        <h3>Somatória de Array (Reduce)</h3>
+        <p>Números recebidos: [${numeros.join(", ")}]</p>
+        <p>O total acumulado é: <b>${total}</b></p>
+    `);
+});
+
 
 export { router_vetores };

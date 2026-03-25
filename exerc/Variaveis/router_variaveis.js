@@ -3,8 +3,8 @@ import { exercicio_var1, exercicio_var2, exercicio_var3 } from './vaexercicios.j
 
 const router_variaveis = express.Router();
 
-
-router_variaveis.get("/Variaveis", (req, res) => {
+// Exercicios fixos
+router_variaveis.get("/variaveis", (req, res) => {
 
     const produto = exercicio_var1();
     const operacao = exercicio_var2();
@@ -37,5 +37,56 @@ router_variaveis.get("/Variaveis", (req, res) => {
         </p>
     `);
 });
+
+
+
+
+// Exercicio utilizando req.params
+// Ex1
+router_variaveis.get("/variaveis/ex1/:nome/:preco/:qtd", (req, res) => {
+    const { nome, preco, qtd } = req.params;
+
+    const produto = {
+        nomeProduto: nome,
+        preco: Number(preco),
+        estoque: Number(qtd)
+    };
+
+    res.send(`
+        <h3>Cadastro de Produto Recebido</h3>
+        <b>Item:</b> ${produto.nomeProduto} <br>
+        <b>Preço:</b> R$ ${produto.preco.toFixed(2)} <br>
+        <b>Estoque:</b> ${produto.estoque} unidades
+    `);
+});
+
+
+// Ex2
+router_variaveis.get("/variaveis/ex2/:n1/:n2", (req, res) => {
+    const n1 = Number(req.params.n1);
+    const n2 = Number(req.params.n2);
+
+    const soma = n1 + n2;
+    const produto = n1 * n2;
+
+    res.send(`
+        <h3>Cálculos com Variáveis</h3>
+        A soma de ${n1} + ${n2} é: <b>${soma}</b> <br>
+        A multiplicação é: <b>${produto}</b>
+    `);
+});
+
+
+// Ex3
+router_variaveis.get("/variaveis/ex3/:nome/:sobrenome/:idade", (req, res) => {
+    const { nome, sobrenome, idade } = req.params;
+    const nomeCompleto = `${nome} ${sobrenome}`;
+
+    res.send(`
+        <h3>Dados da Pessoa</h3>
+        <p>Olá, meu nome completo é <b>${nomeCompleto}</b> e eu tenho <b>${idade}</b> anos.</p>
+    `);
+});
+
 
 export { router_variaveis };

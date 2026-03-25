@@ -1,9 +1,10 @@
 import express from "express";
 import { exercicio_ec1, exercicio_ec2, exercicio_ec3, exercicio_ec4 } from "./ecexercicios.js";
 
-const router_ex = express.Router(); 
+const router_ec = express.Router();
 
-router_ex.get("/Estrutura_condicional", (req, res) => {
+// Exercício fixo
+router_ec.get("/estrutura_condicional", (req, res) => {
     const ex1 = exercicio_ec1();
     const ex2 = exercicio_ec2();
     const ex3 = exercicio_ec3();
@@ -18,4 +19,5 @@ router_ex.get("/Estrutura_condicional", (req, res) => {
     `);
 });
 
-export { router_ex };
+
+export { router_ec };
